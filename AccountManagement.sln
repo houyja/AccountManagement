@@ -3,7 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AccountManagementDatabase", "DatabaseProjects\AccountManagementDatabase\AccountManagementDatabase.sqlproj", "{25B45CC9-BAD0-4FAC-AFAE-EC5233D0555A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManagementLibrary", "Libraries\AccountManagementLibrary\AccountManagementLibrary.csproj", "{225150DC-7A9C-4C87-ABC8-9BA748198F09}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25B45CC9-BAD0-4FAC-AFAE-EC5233D0555A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25B45CC9-BAD0-4FAC-AFAE-EC5233D0555A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25B45CC9-BAD0-4FAC-AFAE-EC5233D0555A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{25B45CC9-BAD0-4FAC-AFAE-EC5233D0555A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25B45CC9-BAD0-4FAC-AFAE-EC5233D0555A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25B45CC9-BAD0-4FAC-AFAE-EC5233D0555A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{225150DC-7A9C-4C87-ABC8-9BA748198F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{225150DC-7A9C-4C87-ABC8-9BA748198F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{225150DC-7A9C-4C87-ABC8-9BA748198F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{225150DC-7A9C-4C87-ABC8-9BA748198F09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
