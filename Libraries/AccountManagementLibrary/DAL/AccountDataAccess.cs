@@ -456,7 +456,7 @@ namespace AccountManagement.DAL
             }
             catch (Exception ex)
             {
-                view.Errors.Add(ex.Message);
+                status.Errors.Add(ex.Message);
                 return false;
             }
         }
