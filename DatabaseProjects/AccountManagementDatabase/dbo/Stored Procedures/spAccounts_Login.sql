@@ -16,7 +16,13 @@ AS
 
 		IF Exists(Select * From Accounts_Login Where AccountID = @outAccountID and HashedPassword = @Hash)
 		Begin
-			If((Select Count(*) From Accounts_InvalidLogin where AccountID = @outAccountID and AttemptValidated = 0) >= (Select ConfigValue from Systems_Config where Config = 'InvalidLogins_ValidAttempts') and (Select ConfigValue from Systems_Config where Config = 'InvalidLogins_ValidAttempts') > 0)
+			IF((Select IsActive From Accounts_Core Where AccountID = @outAccountID) = 0)
+			BEGIN
+				Declare @error varchar(max)
+				Select @error = 'Your Account is currently ' + (Select Status From Accounts_Core Where AccountID = @outAccountID) + 'Due to the following reason: ' + (Select StatusMessage From Accounts_Core Where AccountID = @outAccountID)
+				RaisError(@error, 16, 1)
+			END
+			Else If((Select Count(*) From Accounts_InvalidLogin where AccountID = @outAccountID and AttemptValidated = 0) >= (Select ConfigValue from Systems_Config where Config = 'InvalidLogins_ValidAttempts') and (Select ConfigValue from Systems_Config where Config = 'InvalidLogins_ValidAttempts') > 0)
 			BEGIN
 				RaisError('Your Account has been locked due to repeated failed login attempts. Please reset your password to regain access to your account', 16, 1)
 				Return -1
