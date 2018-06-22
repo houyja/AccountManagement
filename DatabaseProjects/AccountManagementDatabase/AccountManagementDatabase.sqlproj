@@ -109,5 +109,7 @@
     <Build Include="dbo\Stored Procedures\spRoles_EditPermission.sql" />
     <Build Include="dbo\Stored Procedures\spRoles_DeletePermission.sql" />
     <Build Include="dbo\Stored Procedures\spRoles_CreateRole.sql" />
+    <Build Include="dbo\Stored Procedures\spAccounts_DeactivateAccount.sql" />
+    <Build Include="dbo\Stored Procedures\spAccounts_ActivateAccount.sql" />
   </ItemGroup>
 </Project>
