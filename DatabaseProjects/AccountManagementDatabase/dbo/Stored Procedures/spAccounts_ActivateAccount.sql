@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[spAccounts_ActivateAccount]
+﻿CREATE PROCEDURE [dbo].[spAccounts_EnableAccount]
 	@AccountID int
 AS
 	IF Exists(Select * From Accounts_Core Where AccountID = @AccountID)

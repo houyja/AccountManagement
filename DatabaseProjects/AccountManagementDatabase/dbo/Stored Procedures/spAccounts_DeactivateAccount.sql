@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[spAccounts_DeactivateAccount]
+﻿CREATE PROCEDURE [dbo].[spAccounts_DisableAccount]
 	@AccountID int,
 	@Status varchar(50),
 	@StatusReason varchar(max)

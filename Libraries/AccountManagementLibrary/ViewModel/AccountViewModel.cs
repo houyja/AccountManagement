@@ -206,4 +206,14 @@ namespace AccountManagement.ViewModel
         public string Email { get; set; }
         public List<string> Errors { get; set; } = new List<string>();
     }
+
+    //Edit AccountStatus
+    public class AccountViewModel_AccountStatus
+    {
+        public int? AccountID { get; set; }
+        public String Status { get; set; }
+        public String Message { get; set; }
+
+        public List<string> Errors { get; set; } = new List<string>();
+    }
 }

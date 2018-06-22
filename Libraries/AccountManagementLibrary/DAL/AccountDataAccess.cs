@@ -441,5 +441,40 @@ namespace AccountManagement.DAL
                 return false;
             }
         }
+
+        //Status
+        public static Boolean DisableAccount(AccountViewModel_AccountStatus status, string ConnectionString)
+        {
+            try
+            {
+                DataAccess dataAccess = new DataAccess(ConnectionString, "spAccounts_DisableAccount");
+                dataAccess.SetParamater_Input("@AccountID", status.AccountID, SqlDbType.Int);
+                dataAccess.SetParamater_Input("@Status", status.Status, SqlDbType.VarChar, 100);
+                dataAccess.SetParamater_Input("@StatusReason", status.Message, SqlDbType.VarChar, 100);
+                dataAccess.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                view.Errors.Add(ex.Message);
+                return false;
+            }
+        }
+
+        public static Boolean EnableAccount(AccountViewModel_AccountStatus status, string ConnectionString)
+        {
+            try
+            {
+                DataAccess dataAccess = new DataAccess(ConnectionString, "spAccounts_EnableAccount");
+                dataAccess.SetParamater_Input("@AccountID", status.AccountID, SqlDbType.Int);
+                dataAccess.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                status.Errors.Add(ex.Message);
+                return false;
+            }
+        }
     }
 }

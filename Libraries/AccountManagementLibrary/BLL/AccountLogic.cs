@@ -350,5 +350,28 @@ namespace AccountManagement.BLL
 
             return role.Errors.Count > 0 || account.Errors.Count > 0 ? false : AccountDataAccess.DeleteRole(account, role, ConnectionString);
         }
+
+        //Account Status
+        public static Boolean DisableAccount(AccountViewModel_AccountStatus status, string ConnectionString)
+        {
+            if (status.AccountID == null)
+                status.Errors.Add("Account Not Provided");
+
+            if (status.Status == null)
+                status.Errors.Add("Status not Provided");
+
+            if (status.Message == null)
+                status.Errors.Add("Message Not Provided");
+
+            return status.Errors.Count > 0 ? false : false;
+        }
+
+        public static Boolean EnableAccount(AccountViewModel_AccountStatus status, string ConnectionString)
+        {
+            if (status.AccountID == null)
+                status.Errors.Add("Account Not Provided");
+
+            return status.Errors.Count > 0 ? false : false;
+        }
     }
 }
