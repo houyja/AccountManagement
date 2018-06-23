@@ -5,7 +5,7 @@ using System.Data;
 
 namespace AccountManagement.BLL
 {
-    class DataAccess
+    public class DataAccess
     {
         SqlConnection CON;
         SqlCommand CMD;

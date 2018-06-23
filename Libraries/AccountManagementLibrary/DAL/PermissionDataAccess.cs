@@ -10,7 +10,7 @@ using System.Configuration;
 
 namespace AccountManagement.DAL
 {
-    class PermissionDataAccess
+    public class PermissionDataAccess
     {
         //Roles
         public static Boolean CreateRole(RoleViewModel_Role view, string ConnectionString)

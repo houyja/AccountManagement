@@ -3,7 +3,7 @@ using System.Net.Mail;
 
 namespace AccountManagement.ViewModel
 {
-    class EmailViewModel
+    public class EmailViewModel
     {
         public string Body { get; set; }
         public string Subject { get; set; }

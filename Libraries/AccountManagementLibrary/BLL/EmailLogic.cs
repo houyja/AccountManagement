@@ -7,7 +7,7 @@ using AccountManagement.ViewModel;
 
 namespace AccountManagement.BLL
 {
-    class EmailLogic
+    public class EmailLogic
     {
         List<string> errors = new List<string>();
 

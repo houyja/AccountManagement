@@ -8,7 +8,7 @@ using AccountManagement.DAL;
 
 namespace AccountManagement.BLL
 {
-    class PermissionLogic
+    public class PermissionLogic
     {
         //Roles
         public static Boolean CreateRole(RoleViewModel_Role view, string ConnectionString)

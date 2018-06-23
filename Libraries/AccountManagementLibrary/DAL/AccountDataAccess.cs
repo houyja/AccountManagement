@@ -8,7 +8,7 @@ using AccountManagement.BLL;
 
 namespace AccountManagement.DAL
 {
-    class AccountDataAccess
+    public class AccountDataAccess
     {
         //Register
         public static Boolean Register(AccountViewModel_Registration view, string ConnectionString, SecurityLogic security)

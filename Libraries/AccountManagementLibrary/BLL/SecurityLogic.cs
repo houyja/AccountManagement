@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 namespace AccountManagement.BLL
 {
-    class SecurityLogic
+    public class SecurityLogic
     {
         public virtual string GenerateSalt()
         {
