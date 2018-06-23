@@ -363,7 +363,7 @@ namespace AccountManagement.BLL
             if (status.Message == null)
                 status.Errors.Add("Message Not Provided");
 
-            return status.Errors.Count > 0 ? false : false;
+            return status.Errors.Count > 0 ? false : DAL.AccountDataAccess.DisableAccount(status, ConnectionString);
         }
 
         public static Boolean EnableAccount(AccountViewModel_AccountStatus status, string ConnectionString)
@@ -371,7 +371,7 @@ namespace AccountManagement.BLL
             if (status.AccountID == null)
                 status.Errors.Add("Account Not Provided");
 
-            return status.Errors.Count > 0 ? false : false;
+            return status.Errors.Count > 0 ? false : DAL.AccountDataAccess.EnableAccount(status, ConnectionString);
         }
     }
 }
